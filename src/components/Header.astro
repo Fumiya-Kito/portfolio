@@ -3,18 +3,24 @@ import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
 ---
 
-<header>
-  <h2>
-    {SITE_TITLE}
-  </h2>
-  <nav>
-    <HeaderLink href="/" class="text-2xl">About</HeaderLink>
-    <HeaderLink
-      href="https://github.com/Fumiya-Kito/portfolio"
-      target="_blank"
-      class="text-2xl"
-    >
-      Source
-    </HeaderLink>
-  </nav>
+<header class="fixed">
+	<!-- Container div -->
+	<div>
+		<nav class="flex">
+			<a>
+				<h2>Fumiya Kito</h2>
+			</a>
+			<HeaderLink href="/" class="text-lg">TOP</HeaderLink>
+			<HeaderLink href="/" class="text-lg">SKILL</HeaderLink>
+			<HeaderLink href="/" class="text-lg">WORK</HeaderLink>
+			<HeaderLink href="/" class="text-lg">CONTACT</HeaderLink>
+			<HeaderLink
+				href="https://github.com/Fumiya-Kito/portfolio"
+				target="_blank"
+				class="text-lg"
+			>
+				Source
+			</HeaderLink>
+		</nav>
+	</div>
 </header>
