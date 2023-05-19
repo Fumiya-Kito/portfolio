@@ -1,26 +1,27 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
-import { SITE_TITLE } from "../consts";
 ---
 
-<header class="fixed">
+<header class="fixed w-full p-2 z-10 backdrop-blur-sm">
 	<!-- Container div -->
-	<div>
-		<nav class="flex">
+	<div class="mx-auto max-w-xl">
+		<nav class="flex items-center gap-4">
 			<a>
-				<h2>Fumiya Kito</h2>
+				<h2 class="tracking-tight font-semibold p-2 mr-20">Fumiya Kito</h2>
 			</a>
-			<HeaderLink href="/" class="text-lg">TOP</HeaderLink>
-			<HeaderLink href="/" class="text-lg">SKILL</HeaderLink>
-			<HeaderLink href="/" class="text-lg">WORK</HeaderLink>
-			<HeaderLink href="/" class="text-lg">CONTACT</HeaderLink>
-			<HeaderLink
-				href="https://github.com/Fumiya-Kito/portfolio"
-				target="_blank"
-				class="text-lg"
-			>
-				Source
-			</HeaderLink>
+			<div class="gap-5 hidden text-sm md:flex md:float-right">
+				<HeaderLink href="/#" class="">TOP</HeaderLink>
+				<HeaderLink href="/#" class="">SKILL</HeaderLink>
+				<HeaderLink href="/#" class="">WORK</HeaderLink>
+				<HeaderLink href="/#" class="">CONTACT</HeaderLink>
+				<HeaderLink
+					href="https://github.com/Fumiya-Kito/portfolio"
+					target="_blank"
+					class=""
+				>
+					Source
+				</HeaderLink>
+			</div>
 		</nav>
 	</div>
 </header>
