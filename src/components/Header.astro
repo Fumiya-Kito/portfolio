@@ -1,11 +1,12 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
+import Humburger from "./Humburger.astro";
 ---
 
 <header class="fixed w-full p-2 z-10 backdrop-blur-sm">
 	<!-- Container div -->
 	<div class="mx-auto max-w-xl">
-		<nav class="flex items-center gap-4">
+		<nav class="flex items-center gap-4 relative">
 			<a>
 				<h2 class="tracking-tight font-semibold p-2 mr-20">Fumiya Kito</h2>
 			</a>
@@ -21,6 +22,9 @@ import HeaderLink from "./HeaderLink.astro";
 				>
 					Source
 				</HeaderLink>
+			</div>
+			<div class="md:hidden inline-flex absolute right-0 top-1">
+				<Humburger/>
 			</div>
 		</nav>
 	</div>
