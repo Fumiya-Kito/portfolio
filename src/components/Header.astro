@@ -1,6 +1,6 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
-import Humburger from "./Humburger.astro";
+import Hamburger from "./Hamburger.astro";
 ---
 
 <header class="fixed w-full p-2 z-10 backdrop-blur-sm">
@@ -23,9 +23,53 @@ import Humburger from "./Humburger.astro";
 					Source
 				</HeaderLink>
 			</div>
-			<div class="md:hidden inline-flex absolute right-0 top-0">
-				<Humburger/>
+			<div class="hamburger md:hidden inline-flex absolute right-0 top-0">
+				<Hamburger/>
+			</div>
+
+			<div class="nav-links md:hidden mt-10">
+				<a href="/">TOP</a>
+				<a href="/#">SKILL</a>
+				<a href="/#">WORK</a>
+				<a href="/#">CONTACT</a>
+				<a href="/#">SOURCE</a>
 			</div>
 		</nav>
 	</div>
 </header>
+
+
+<script>
+	const humburger = document.querySelector<HTMLElement|any>('.hamburger');
+	humburger.addEventListener('click', () => {
+		document.querySelector<HTMLElement|any>('.nav-links').classList.toggle('expanded');
+	});
+</script>
+
+
+<style>
+	.nav-links {
+		padding: 8px;
+		background-color: #fff;
+		border: 1px solid #000;
+		border-radius: 5%;
+		width: 120px;
+		position: absolute;
+		top: 10px;
+		right: 0;
+		display: none;
+	}
+
+	.nav-links a {
+		display: block;
+		text-align: right;
+		padding: 4px 0;
+		text-decoration: none;
+		font-size: 1.2rem;
+		text-transform: uppercase;
+	}
+
+	.expanded {
+		display: unset;
+	}
+</style>
