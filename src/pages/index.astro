@@ -1,5 +1,6 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
+import Card from '../components/Card.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
@@ -14,8 +15,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 			<main class="pt-14">
 				<!-- masthead -->
 				<div>
-					<h1 class="text-4xl">Image(MastHead)	
-					</h1>
+					<img src="/dachshund.png" alt="ダックスフンド">
+					<ul>
+						<Card title="Card Component Sample" body="Body of Card" href='#' imageHref="/dachshund.png"/>
+					</ul>
 					<h1 class="text-4xl">鬼頭 史也</h1>
 					<p class="mb-96">自己紹介</p>
 				</div>

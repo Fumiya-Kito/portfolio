@@ -1,0 +1,19 @@
+---
+export interface Props {
+  title: string;
+  body: string;
+  href?: string;
+  imageHref?: string;
+}
+
+const { title, body, imageHref, href } = Astro.props;
+---
+
+
+<li class="">
+  {imageHref && <img src={imageHref} alt={imageHref.substring(imageHref.lastIndexOf('/')+1)}>}
+  <a href={href} class="">
+    <h2>{title}</h2>
+    <p>{body}</p>
+  </a>
+</li>
