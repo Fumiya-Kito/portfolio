@@ -13,29 +13,30 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	<body>
 		<BaseLayout pageTitle={SITE_TITLE}>
 			<main class="pt-14">
-				<!-- masthead -->
-				<div>
-					<img src="/dachshund.png" alt="ダックスフンド">
-					<ul>
-						<Card title="Card Component Sample" body="Body of Card" href='#' imageHref="/dachshund.png"/>
-					</ul>
+				<div class="px-8 mx-auto max-w-3xl bg-gray-50">
+					<!-- masthead -->
 					<h1 class="text-4xl">鬼頭 史也</h1>
 					<p class="mb-96">自己紹介</p>
+					<!-- Skills -->
+					<h1 id="skill" class="text-4xl pt-14">My Skill</h1>
+					<ul class="flex flex-col sm:flex-row pl-1">
+						<Card title="Card Component Sample" body="Body of Card Super Loooooooooooong and loooooooooooong and lonnnnnnnnng" href='#' imageHref="/dachshund.png"/>
+						<Card title="Card Component Sample" body="Body of Card" href='#' imageHref="/dachshund.png"/>
+						<Card title="Card Component Sample" body="Body of Card" href='#' imageHref="/dachshund.png"/>
+					</ul>
+					<p>container / card / Logo / description \\ level</p>
+					<p>大項目:Frontend、Backend</p>
+					<p>項目: HTML,CSS,JS、TS、React、Next</p>
+					<p class="mb-96">項目: Python、Java</p>
+					<!-- Work -->
+					<h1 id="work" class="text-4xl pt-14">My Work</h1>
+					<p class="mb-96">container / card / Img / description</p>
+					<!-- Contact -->
+					<h1 id="sns" class="text-4xl pt-14">SNS</h1>
+					<p class="">GitHub</p>
+					<p class="">zenn</p>
+					<p class="">Instagram</p>
 				</div>
-				<!-- Skills -->
-				<h1 id="skill" class="text-4xl pt-14">My Skill</h1>
-				<p>container / card / Logo / description \\ level</p>
-				<p>大項目:Frontend、Backend</p>
-				<p>項目: HTML,CSS,JS、TS、React、Next</p>
-				<p class="mb-96">項目: Python、Java</p>
-				<!-- Work -->
-				<h1 id="work" class="text-4xl pt-14">My Work</h1>
-				<p class="mb-96">container / card / Img / description</p>
-				<!-- Contact -->
-				<h1 id="sns" class="text-4xl pt-14">SNS</h1>
-				<p class="">GitHub</p>
-				<p class="">zenn</p>
-				<p class="">Instagram</p>
 			</main>
 		</BaseLayout>
 	</body>

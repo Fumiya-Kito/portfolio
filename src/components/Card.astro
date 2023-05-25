@@ -10,7 +10,7 @@ const { title, body, imageHref, href } = Astro.props;
 ---
 
 
-<li class="">
+<li class="sm:flex1 p-3 m-1 shadow-lg sm:w-56">
   {imageHref && <img src={imageHref} alt={imageHref.substring(imageHref.lastIndexOf('/')+1)}>}
   <a href={href} class="">
     <h2>{title}</h2>
