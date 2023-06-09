@@ -3,33 +3,41 @@ export interface Props {
   title: string;
   body: string;
   href?: string;
-  imageHref?: string;
+  imageHref: string;
   target?: string;
 }
 
 const { title, body, imageHref, href, target } = Astro.props;
 ---
 
-<li class="border border-slate-300 rounded-xl ">
-  {
-    imageHref && (
-      <img
-        class=""
-        width={720}
-        src={imageHref}
-        alt={imageHref.substring(imageHref.lastIndexOf("/") + 1)}
-      />
-    )
-  }
+<li>
   {
     target ? (
-      <a href={href} class="" target={target}>
-        <h2>{title}</h2>
-        <p>{body}</p>
-      </a>
-    ) : (
-      <h2>{title}</h2>
-      <p>{body}</p>
+      <a href={href} target={target}>
+        <img
+          class="border border-slate-300 rounded-xl"
+          width={720}
+          src={imageHref}
+          alt={imageHref.substring(imageHref.lastIndexOf("/") + 1)}
+        />
+        <div class="p-3 text-center">
+          <h2 class="font-bold">-{title}-</h2>
+          <p>{body}</p>
+        </div>
+        </a>
+        ) : (
+          <>
+          <img
+          class="border border-slate-300 rounded-xl"
+          width={720}
+          src={imageHref}
+          alt={imageHref.substring(imageHref.lastIndexOf("/") + 1)}
+          />
+          <div class="p-3 text-center">
+            <h2 class="font-bold">-{title}-</h2>
+            <p>{body}</p>
+          </div>
+      </>
     )
   }
 </li>
