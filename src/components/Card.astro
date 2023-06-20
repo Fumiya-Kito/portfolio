@@ -15,7 +15,7 @@ const { title, body, imageHref, href, target } = Astro.props;
     target ? (
       <a href={href} target={target}>
         <img
-          class="border border-slate-300 rounded-xl"
+          class="rounded-xl"
           width={720}
           src={imageHref}
           alt={imageHref.substring(imageHref.lastIndexOf("/") + 1)}
@@ -28,7 +28,7 @@ const { title, body, imageHref, href, target } = Astro.props;
         ) : (
           <>
           <img
-          class="border border-slate-300 rounded-xl"
+          class="rounded-xl"
           width={720}
           src={imageHref}
           alt={imageHref.substring(imageHref.lastIndexOf("/") + 1)}

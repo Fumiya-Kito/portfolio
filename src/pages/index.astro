@@ -12,30 +12,36 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	</head>
 	<body>
 		<BaseLayout pageTitle={SITE_TITLE}>
-			<main class="pt-14">
-				<div class="px-8 mx-auto max-w-3xl bg-gray-50">
+			<main class="">
+				<div class="pt-14 px-8 mx-auto max-w-3xl bg-gray-50">
 					<!-- masthead -->
-					<h1 class="text-4xl">鬼頭 史也</h1>
-					<p class="mb-96">自己紹介</p>
+					<section id="masthead">
+						<img class="m-auto" src="/astro_header.png" alt="masthead">
+					</section>
 					<!-- Skills -->
-					<h1 id="skill" class="text-4xl pt-14">My Skill</h1>
-					<ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-						<Card title="Frontend" body="Body of Frontend" href='#' imageHref="/frontend.svg"/>
-						<Card title="Card Component Sample" body="Body of Card" href='#' imageHref="/shiftweb.png"/>
-						<Card title="Card Component Sample" body="Body of Card" href='#' imageHref="/dachshund.png"/>
-						<Card title="Card Component Sample" body="Body of Card" href='#' imageHref="/shiftweb.png"/>
-					</ul>
-					<p>container / card / Logo / description \\ level</p>
-					<p>大項目:Frontend、Backend</p>
-					<p>項目: HTML,CSS,JS、TS、React、Next</p>
-					<p class="mb-96">項目: Python、Java</p>
-					<!-- Work -->
-					<h1 id="work" class="text-4xl pt-14">My Work</h1>
-					<ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-						<Card title="シフト管理アプリ" body="シフト提出・管理をWeb上で行う" href='https://django-vercel-three-khaki.vercel.app/' imageHref="/shiftweb.png" target="_blank"/>
-					</ul>
+					<section id="skill">
+						<h1 class="text-4xl pt-32 pb-10 text-center">My Skill</h1>
+						<ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+							<Card title="Frontend" body="Body of Frontend" href='#' imageHref="/frontend.svg"/>
+							<Card title="Backend" body="Body of Backend" href='#' imageHref="/backend.svg"/>
+							<Card title="Basics" body="Body of Basics" href='#' imageHref="/basic.svg"/>
+							<Card title="Framework" body="Body of Framework" href='#' imageHref="/framework.svg"/>
+						</ul>
+					</section>
+					<!-- Works -->
+					<sction>
+						<h1 id="work" class="text-4xl pt-32 pb-10 text-center">My Works</h1>
+						<ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+							<Card title="シフト管理アプリ" body="シフト提出・管理をWeb上で行う" href='https://django-vercel-three-khaki.vercel.app/' imageHref="/shiftweb.png" target="_blank"/>
+						</ul>
+					</sction>
+					<!-- Blog -->
+					<section>
+						<h1 class="text-4xl pt-32 pb-10 text-center">Blog</h1>
+					</section>
+
 					<!-- Contact -->
-					<h1 id="sns" class="text-4xl pt-14">SNS</h1>
+					<h1 id="sns" class="text-4xl pt-32 pb-10">SNS</h1>
 					<p class="">GitHub</p>
 					<p class="">zenn</p>
 					<p class="">Instagram</p>
