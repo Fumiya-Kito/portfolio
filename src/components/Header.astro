@@ -1,25 +1,87 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
+import HeaderLink from "./HeaderLink.astro";
+import Hamburger from "./Hamburger.astro";
 ---
 
-<header>
-	<h2>
-		{SITE_TITLE}
-	</h2>
-	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
-		<HeaderLink href="/about">About</HeaderLink>
-		<HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">Twitter</HeaderLink>
-		<HeaderLink href="https://github.com/withastro/astro" target="_blank">GitHub</HeaderLink>
-	</nav>
+<header class="fixed w-full p-2 z-10 backdrop-blur-md">
+  <!-- Container div -->
+  <div class="mx-auto max-w-xl">
+    <nav class="flex items-center gap-4 relative">
+      <a>
+        <h2 class="tracking-tight font-semibold p-2 mr-20">Fumiya Kito</h2>
+      </a>
+      <div class="gap-5 hidden text-sm md:flex md:float-right">
+        <HeaderLink href="/#">TOP</HeaderLink>
+        <HeaderLink href="/#skill">SKILL</HeaderLink>
+        <HeaderLink href="/#work">WORK</HeaderLink>
+        <HeaderLink href="/#blog">BLOG</HeaderLink>
+        <HeaderLink href="/#sns">SNS</HeaderLink>
+        <HeaderLink href="https://github.com/Fumiya-Kito/portfolio" target="_blank">
+          Source</HeaderLink>
+      </div>
+      <div class="hamburger md:hidden inline-flex absolute right-0 top-0">
+        <Hamburger />
+      </div>
+
+      <div class="nav-links md:hidden mt-10">
+        <HeaderLink href="/#">TOP</HeaderLink>
+        <HeaderLink href="/#skill">SKILL</HeaderLink>
+        <HeaderLink href="/#work">WORK</HeaderLink>
+        <HeaderLink href="/#blog">BLOG</HeaderLink>
+        <HeaderLink href="/#sns">SNS</HeaderLink>
+        <HeaderLink href="https://github.com/Fumiya-Kito/portfolio" target="_blank">
+          Source</HeaderLink>
+      </div>
+    </nav>
+  </div>
 </header>
+
+<script>
+  const hamburger = document.querySelector<HTMLElement | any>(".hamburger");
+  const hamburger_links = document.querySelectorAll<NodeList | any>(
+    ".nav-links a"
+  );
+
+  hamburger.addEventListener("click", () => {
+    document
+      .querySelector<HTMLElement | any>(".nav-links")
+      .classList.toggle("expanded");
+  });
+  hamburger_links.forEach((item) =>
+    item.addEventListener("click", () => {
+      document
+        .querySelector<HTMLElement | any>(".nav-links")
+        .classList.toggle("expanded");
+    })
+  );
+</script>
+
 <style>
-	header {
-		margin: 0em 0 2em;
-	}
-	h2 {
-		margin: 0.5em 0;
-	}
+  .nav-links {
+    padding: 8px;
+    background-color: #fff;
+    border: 1px solid #000;
+    width: 120px;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    display: none;
+  }
+
+  .nav-links a {
+    display: block;
+    text-align: right;
+    padding: 4px 0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+
+  .expanded {
+    display: unset;
+  }
+
+  .remove {
+    display: none;
+  }
 </style>
