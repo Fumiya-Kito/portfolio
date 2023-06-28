@@ -1,3 +1,14 @@
+# Homepage
+https://profound-puffpuff-835812.netlify.app/
+
+# Stack
+Editing
+
+# Project Structure
+```
+Editing
+```
+
 # Astro Starter Kit: Blog
 
 ```
